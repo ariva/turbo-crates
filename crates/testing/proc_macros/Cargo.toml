@@ -1,0 +1,19 @@
+[package]
+name = "turbo-crates-testing-proc-macros"
+version = "0.0.1"
+edition = "2021"
+authors = ["Arunas Iva"]
+description = "turbo-crates testing proc macros"
+repository = "https://github.com/ariva/turbo-crates.git"
+license = "MIT OR Apache-2.0"
+
+[lib]
+proc-macro = true
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+quote = "1.0"
+syn = { version = "2.0.15", features = ["full", "fold", "printing"] }
+proc-macro2 = "1.0"
+once_cell = "1.7"
