@@ -1,6 +1,6 @@
 [package]
 name = "turbo-crates"
-version = "0.0.1"
+version = "0.0.2"
 edition = "2021"
 authors = ["Arunas Iva"]
 description = "A set of useful crates (WIP)"
@@ -13,4 +13,4 @@ members = [
 ]
 
 [dependencies]
-turbo-crates-testing-proc-macros = { version="0.0.1", path = "crates/testing/proc_macros" }
+turbo-crates-testing-proc-macros = { version="0.0.2", path = "crates/testing/proc_macros" }
