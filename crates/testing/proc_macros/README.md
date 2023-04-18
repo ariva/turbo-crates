@@ -4,6 +4,9 @@
 * `safe_tests` - Mark a module of tests as "safe"
 * `safe_test` - Mark which test will be "safe"
 
+## Testing
+`cargo test -p turbo-crates-testing-proc-macros`
+
 ## Example
 
 ```rust

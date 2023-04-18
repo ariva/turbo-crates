@@ -1,0 +1,10 @@
+error[E0425]: cannot find value `b` in this scope
+ --> tests/ui/safe_test_has_different_mutex_name.rs:9:5
+  |
+5 | #[safe_tests(a)]
+  | ---------------- similarly named static `a` defined here
+...
+9 |     #[safe_test(b)]
+  |     ^^^^^^^^^^^^^^^ help: a static with a similar name exists: `a`
+  |
+  = note: this error originates in the attribute macro `safe_test` (in Nightly builds, run with -Z macro-backtrace for more info)

@@ -1,8 +1,5 @@
-extern crate proc_macro;
-extern crate syn;
-#[macro_use]
-extern crate quote;
 use proc_macro::TokenStream;
+use quote::*;
 use syn::parse_macro_input;
 
 #[proc_macro_attribute]
@@ -18,19 +15,20 @@ use syn::parse_macro_input;
 ///
 /// Example:
 /// ```rust
+/// #[cfg(test)]
 /// #[safe_tests]
 /// pub(crate) mod test {
 ///     const TEST_ENV_VAR: &str = "TEST_ENV_VAR";
 ///
-///     #[safe_test]
 ///     #[test]
+///     #[safe_test]
 ///     fn it_works1() {
 ///         std::env::set_var(TEST_ENV_VAR, "test1");
 ///         let test_value = std::env::var(TEST_ENV_VAR).unwrap();
 ///         assert_eq!(test_value, "test1");
 ///     }
-///     #[safe_test]
 ///     #[test]
+///     #[safe_test]
 ///     fn it_works2() {
 ///         std::env::set_var(TEST_ENV_VAR, "test2");
 ///         let test_value = std::env::var(TEST_ENV_VAR).unwrap();
@@ -56,7 +54,6 @@ pub fn safe_tests(attr: TokenStream, input: TokenStream) -> TokenStream {
         static #mutex_var: std::sync::Mutex<()> = std::sync::Mutex::new(());
         #(#content)*
     })
-    // input
 }
 
 fn token_stream_with_error(mut tokens: TokenStream, error: syn::Error) -> TokenStream {
