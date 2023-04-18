@@ -1,5 +1,5 @@
 error[E0425]: cannot find value `b` in this scope
- --> tests/ui/safe_test_has_different_mutex_name.rs:9:5
+ --> tests/ui/fail/safe_test_has_different_mutex_name.rs:9:5
   |
 5 | #[safe_tests(a)]
   | ---------------- similarly named static `a` defined here

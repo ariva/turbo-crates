@@ -1,5 +1,5 @@
 error: custom attribute panicked
- --> tests/ui/safe_tests_has_too_many_args.rs:5:1
+ --> tests/ui/fail/safe_tests_has_too_many_args.rs:5:1
   |
 5 | #[safe_tests(a, b)]
   | ^^^^^^^^^^^^^^^^^^^
