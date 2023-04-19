@@ -12,13 +12,11 @@ Include:
 turbo-crates = { version="0.0.3", features=["testing_proc_macros"] }
 ```
 
-```rust
-use turbo_crates::testing::proc_macros::*;
-```
-
 Use:
 
 ```rust
+use turbo_crates::testing::proc_macros::*;
+
 #[cfg(test)]
 #[safe_tests]
 pub(crate) mod test {
