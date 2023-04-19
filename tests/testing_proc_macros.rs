@@ -1,5 +1,7 @@
+#[cfg(feature = "testing-proc_macros")]
 use turbo_crates::testing::proc_macros::*;
 
+#[cfg(feature = "testing-proc_macros")]
 #[cfg(test)]
 #[safe_tests]
 pub(crate) mod test {
