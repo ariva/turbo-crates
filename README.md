@@ -9,7 +9,7 @@ A set of useful crates (WIP)
 Include:
 
 ```toml
-turbo-crates = { version="0.0.3", features=["testing_proc_macros"] }
+turbo-crates = { version="0.0.3", features=["testing"] }
 ```
 
 Use:
